@@ -1,0 +1,80 @@
+html, body {
+  font-size: 14px;
+  font-family: "Open Sans";
+  overflow: auto;
+  height: 100vh;
+  margin: 0;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+/* bakcground image */
+.background-image {
+  height: 100%;
+  background-image: url('./images/forest-small.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Header Styling */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+  background-color: black;
+  padding: "12px 0";
+  height: 7vh;
+  box-shadow: 4px 0px 7px 3px rgba(0,0,0,0.7);
+  z-index: 2;
+}
+
+header > h1 {
+  margin: 0;
+}
+
+/* Main Styling */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.frosted-box {
+  position: relative;
+  top: 9vh;
+  background-color: rgba(255,255,255, 0.5);
+  border-radius: 16px;
+  border: 2px solid white;
+  width: 40vw;
+  height: 85vh;
+  backdrop-filter: blur(10px);
+}
+
+/* Footer Styling */
+footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  background-color: black;
+  color: white;
+  height: 5vh;
+  width: 100%;
+  box-shadow: -4px 0px 7px 3px rgba(0,0,0,0.7);
+  z-index: 2;
+}
