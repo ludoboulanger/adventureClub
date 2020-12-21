@@ -62,6 +62,7 @@ header > h1 {
   border-radius: 16px;
   border: 2px solid white;
   width: 40vw;
+  min-width: 600px;
   height: 85vh;
   backdrop-filter: blur(10px);
 }
@@ -77,4 +78,27 @@ footer {
   width: 100%;
   box-shadow: -4px 0px 7px 3px rgba(0,0,0,0.7);
   z-index: 2;
+}
+
+@media only screen and (max-width: 600px) {
+  .frosted-box {
+    position: relative;
+    top: 9vh;
+    background-color: rgba(255,255,255, 0.5);
+    border-radius: 16px;
+    border: 2px solid white;
+    width: 90vw;
+    min-width: 0;
+    height: 85vh;
+    backdrop-filter: blur(10px);
+  }
+
+  header {
+    justify-content: space-between;
+  }
+
+  header > h1 {
+    font-size: 18px;
+    margin-left: 12px;
+  }
 }
