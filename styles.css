@@ -1,8 +1,14 @@
+html {
+  background: url(images/forest.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 html, body {
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Open Sans";
-  overflow: auto;
-  height: 100vh;
   margin: 0;
   scrollbar-width: none;
 }
@@ -13,15 +19,6 @@ html, body {
 
 ::-webkit-scrollbar-thumb {
   display: none;
-}
-
-/* bakcground image */
-.background-image {
-  height: 100%;
-  background-image: url('./images/forest-small.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 /* Header Styling */
@@ -40,7 +37,7 @@ header {
   background-color: black;
   padding: "12px 0";
   height: 7vh;
-  box-shadow: 4px 0px 7px 3px rgba(0,0,0,0.7);
+  box-shadow: 0px 4px 7px 3px rgba(0,0,0,0.7);
   z-index: 2;
 }
 
@@ -49,22 +46,103 @@ header > h1 {
 }
 
 /* Main Styling */
-.main {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+
+.grid-img {
+  width: 100%;
+  height: 100%;
+  border: 1 px solid black;
+  border-radius: 16px;
+  box-shadow: 0px 4px 7px 3px rgba(0,0,0,0.7);
 }
 
-.frosted-box {
+.grid-title {
+  color: white;
+  font-family: 'Open Sans';
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+}
+
+.grid-text {
+  color: white;
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  font-style: italic;
+  margin: 0;
+}
+
+.signup {
+  width: 150px;
+  height: 40px;
+  background-color: black;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: width 0.2s ease, height 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  width: 155px;
+  height: 45px;
+  box-shadow: 0px 4px 7px 3px rgba(0,0,0,0.7);
+}
+
+.main {
   position: relative;
   top: 9vh;
-  background-color: rgba(255,255,255, 0.5);
+  background-color: rgba(0,0,0, 0.4);
   border-radius: 16px;
-  border: 2px solid white;
-  width: 40vw;
+  border: 2px solid black;
   min-width: 600px;
+  max-width: 1200px;
+  width: 90%;
   height: 85vh;
-  backdrop-filter: blur(10px);
+  display: grid;
+  grid-template: repeat(20, 1fr) / repeat(12, 1fr);
+  margin: 0 auto;
+  overflow: auto;
+}
+
+/*Upcoming Activites */
+
+.upcoming {
+  grid-area: 1 / 1 / span 1 / span 5;
+}
+
+/* Kayak */
+
+ .kayak-img {
+  grid-area: 2 / 2 / 8 / 7;
+  background-image: url("./images/riverKayak.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 0px 4px 7px 3px rgba(0,0,0,0.7);
+}
+
+.kayak-title {
+  grid-area: 2 / 6 / span 1 / span 3;
+  align-self: end;
+}
+
+.kayak-date {
+  grid-area: 3 / 7 / span 1 / span 3;
+}
+
+.kayak-desc {
+  max-width: 400px;
+  grid-area: 4 / 8 / span 1 / -1;
+}
+
+.kayak-button {
+  align-self: start;
+  justify-self: start;
+  grid-area: 5 / 8 / span 1 / span 2;
 }
 
 /* Footer Styling */
@@ -76,21 +154,22 @@ footer {
   color: white;
   height: 5vh;
   width: 100%;
-  box-shadow: -4px 0px 7px 3px rgba(0,0,0,0.7);
+  box-shadow: 0px -4px 7px 3px rgba(0,0,0,0.7);
   z-index: 2;
 }
 
-@media only screen and (max-width: 600px) {
-  .frosted-box {
+@media only screen and (max-width: 600px) { 
+  .main {
     position: relative;
     top: 9vh;
-    background-color: rgba(255,255,255, 0.5);
+    background-color: rgba(0,0,0, 0.5);
     border-radius: 16px;
-    border: 2px solid white;
+    border: 2px solid black;
     width: 90vw;
     min-width: 0;
     height: 85vh;
-    backdrop-filter: blur(10px);
+    grid-template-columns: 100%;
+    grid-row-gap: 8px;
   }
 
   header {
@@ -100,5 +179,51 @@ footer {
   header > h1 {
     font-size: 18px;
     margin-left: 12px;
+  }
+
+  .kayak-img {
+    grid-area: 2 / 1 / span 7 / span 1;
+    box-shadow: 0px 4px 7px 3px rgba(0,0,0,0.7);
+  }
+
+  .grid-img {
+    display: none;
+  }
+
+  .grid-text {
+    font-size: 1.2rem;
+  }
+
+  /* Kayaking */
+  
+  .kayak-title {
+    grid-area: 2 / 1 / span 1 / 1;
+    align-self: end;
+    justify-self: end;
+    padding-right: 8px;
+  }
+ 
+  .kayak-date {
+    grid-area: 3 / 1 / span 1 / span 1;
+    align-self: start;
+    justify-self: end;
+    padding-right: 8px;
+  }
+
+  .kayak-desc {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    grid-area: 7 / 1 / span 1 / span 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid black;
+    border-radius: 12px;
+    width: 100%;
+  }
+   
+  .kayak-button {
+    align-self: end;
+    justify-self: end;
+    grid-area: 4 / 1 / span 1 / span 2;
   }
 }
