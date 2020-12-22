@@ -97,12 +97,14 @@ article > h3 {
   font-size: 1.5rem;
   font-weight: 400;
   font-style: italic;
+  margin-left: 0.5rem;
 }
 
 .activity-text {
   color: white;
   font-size: 1rem;
   font-style: italic;
+  margin-left: 0.5rem;
 }
 
 .activity-header {
@@ -159,10 +161,17 @@ article > h3 {
   background-image: url('./images/riverKayak.jpg');
 }
 
-/* Kayak */
+/* Hiking */
 
 #hiking-img {
   background-image: url('./images/hiking.jpg');
+  background-position: bottom;
+}
+
+/* Snowshoe */
+
+#snowshoe-img {
+  background-image: url('./images/snowshoe.jpg');
   background-position: bottom;
 }
 
