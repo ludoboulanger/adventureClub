@@ -46,6 +46,10 @@ header > h1 {
 
 /* Main Styling */
 
+.main {
+  flex-grow: 1;
+}
+
 /* Footer Styling */
 
 .icon {
@@ -58,7 +62,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   background-color: black;
   color: white;
