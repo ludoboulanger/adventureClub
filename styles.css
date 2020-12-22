@@ -44,10 +44,119 @@ header > h2 {
   margin: 0;
 }
 
+article {
+  color: white;
+  width: 70%;
+}
+
+article > h3 {
+  text-align: center;
+}
+
 /* Main Styling */
 
 .main {
-  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 90vw;
+  height: 1400px;
+  position: relative;
+  top: 10vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid black;
+  border-radius: 16px;
+  margin: auto;
+  align-content: stretch;
+  justify-content: stretch;
+}
+
+.section-title {
+  margin: 12px auto;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1.8rem;
+}
+
+
+.card {
+  box-shadow: 0px 4px 7px 3px rgba(0,0,0,0.7);
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0.8);
+  min-height: 360px;
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin: 1rem auto;
+}
+
+.activity-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.activity-text {
+  color: white;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.activity-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-left: 16px;
+}
+
+.sign-up {
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  text-align: center;
+  width: 125px;
+  height: 60px;
+  transition: width 0.3s ease, height 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+}
+
+.sign-up:hover {
+  width: 135px;
+  height: 65px;
+  border: 2px solid black;
+  font-weight: 600;
+  box-shadow: 0px 4px 7px 3px rgba(0,0,0,0.7);
+}
+
+/* Kayak */
+
+#kayak-img {
+  margin: 8px;
+  grid-area: 1 / 1 / -1 / span 5;
+  background-image: url('./images/riverKayak.jpg');
+  background-position: center;
+  background-size: cover;
+  border: 2px solid white;
+  border-radius: 16px;
+}
+
+#kayak-title {
+  grid-area: 1 / 1 / span 1 / span 3;
+  align-self: end;
+}
+
+#kayak-desc {
+  grid-area: 1 / 7 / -1 / -1;
+}
+
+#kayak-sign-up {
+  grid-area: 3 / 1 / span 1 / span 5;
+  justify-self: center;
+  align-self: start;
 }
 
 /* Footer Styling */
@@ -69,14 +178,20 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  top: 12vh;
   background-color: black;
   color: white;
   height: max-content;
   width: 100%;
   box-shadow: 0px -4px 7px 3px rgba(0,0,0,0.7);
   z-index: 2;
+}
+
+@media only screen and (max-width: 1400px) {
+  article {
+    width: 90%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
