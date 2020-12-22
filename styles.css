@@ -99,10 +99,11 @@ button:hover {
   min-width: 600px;
   max-width: 1200px;
   width: 90%;
-  height: 85vh;
+  height: 2500px;
   display: grid;
-  grid-template: repeat(20, 1fr) / repeat(12, 1fr);
+  grid-template: repeat(16, 1fr) / repeat(12, 1fr);
   margin: 0 auto;
+  padding-bottom: 72px;
   overflow: auto;
 }
 
@@ -136,18 +137,18 @@ button:hover {
 
 .kayak-desc {
   max-width: 400px;
-  grid-area: 4 / 8 / span 1 / -1;
+  grid-area: 4 / 7 / span 1 / -1;
 }
 
 .kayak-button {
   align-self: start;
   justify-self: start;
-  grid-area: 5 / 8 / span 1 / span 2;
+  grid-area: 5 / 7 / span 1 / span 2;
 }
 
 /* Hiking */
 .hiking-img {
-  grid-area: 8 / 8 / 17 / -2;
+  grid-area: 7 / 6 / 13 / -2;
   background-image: url("./images/hiking.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -158,24 +159,56 @@ button:hover {
 }
 
 .hiking-title {
-  grid-area: 8 / 5 / span 1 / span 3;
-  justify-self: start;
+  grid-area: 8 / 3 / span 1 / span 3;
+  justify-self: end;
   align-self: end;
 }
 
 .hiking-date {
-  grid-area: 9 / 5 / span 1 / span 3;
-  justify-self: start;
+  grid-area: 9 / 4 / span 1 / span 2;
+  justify-self: end;
   align-self: start;
 }
 
 .hiking-desc {
-  grid-area: 10 / 4 / span 1 / span 4;
+  grid-area: 10 / 1 / span 1 / span 5;
 }
 
 .hiking-button {
   grid-area: 11 / 4 / span 1 / span 2;
+  justify-self: end;
 }
+
+/* SnowShow */
+
+.snowshoe-img {
+  grid-area: 12 / 2 / 17 / 8;
+  background-image: url("./images/snowshoe.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 0px 4px 7px 3px rgba(0,0,0,0.7);
+}
+
+.snowshoe-title {
+  grid-area: 13 / 8 / span 1 / span 4;
+  align-self: end;
+}
+
+.snowshoe-date {
+  grid-area: 14 / 8 / span 1 / span 3;
+}
+
+.snowshoe-desc {
+  grid-area: 15 / 8 / span 1 / -1;
+}
+
+.snowshoe-button {
+  grid-area: 16 / 8 / span 1 / span 2;
+}
+
 
 /* Footer Styling */
 footer {
@@ -201,7 +234,9 @@ footer {
     min-width: 0;
     height: 85vh;
     grid-template-columns: 100%;
+    grid-template-rows: repeat(21, 1fr);
     grid-row-gap: 20px;
+    overflow: hidden;
   }
 
   header {
@@ -293,5 +328,43 @@ footer {
   .hiking-button {
     grid-area: 11 / 1 / span 1 / span 1;
     justify-self: start;
+  }
+
+  /* SnowShoe */
+
+  .snowshoe-img {
+    grid-area: 16 / 1 / -1 / span 1;
+  }
+  
+  .snowshoe-title {
+    grid-area: 16 / 1 / span 1 / span 1;
+    justify-self: end;
+    align-self: end;
+    color: black;
+    padding-right: 8px;
+  }
+  
+  .snowshoe-date {
+    grid-area: 17 / 1 / span 1 / span 1;
+    justify-self: end;
+    align-self: start;
+    color: black;
+    padding-right: 8px;
+  }
+  
+  .snowshoe-desc {
+    grid-area: 19 / 1 / span 1 / span 1;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid black;
+    border-radius: 12px;
+    width: 100%;
+  }
+  
+  .snowshoe-button {
+    grid-area: 18 / 1 / span 1 / span 1;
+    justify-self: end;
   }
 }
