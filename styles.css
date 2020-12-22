@@ -172,7 +172,7 @@ article > h3 {
 
 #snowshoe-img {
   background-image: url('./images/snowshoe.jpg');
-  background-position: bottom;
+  background-position: center;
 }
 
 /* Footer Styling */
