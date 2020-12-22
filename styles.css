@@ -44,10 +44,135 @@ header > h2 {
   margin: 0;
 }
 
+article {
+  color: white;
+  width: 70%;
+}
+
+article > h3 {
+  text-align: center;
+}
+
 /* Main Styling */
 
 .main {
-  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 90vw;
+  min-height: 1400px;
+  position: relative;
+  top: 10vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid black;
+  border-radius: 16px;
+  margin: auto;
+  align-content: stretch;
+  justify-content: stretch;
+}
+
+.section-title {
+  margin: 12px auto;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1.8rem;
+}
+
+
+.card {
+  box-shadow: 0px 4px 7px 3px rgba(0,0,0,0.7);
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0.8);
+  min-height: 360px;
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin: 1rem auto;
+}
+
+.activity-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: italic;
+  margin-left: 0.5rem;
+}
+
+.activity-text {
+  color: white;
+  font-size: 1rem;
+  font-style: italic;
+  margin-left: 0.5rem;
+}
+
+.activity-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-left: 16px;
+  grid-area: 1 / 1 / span 1 / span 3;
+  align-self: end;
+}
+
+.sign-up {
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  text-align: center;
+  width: 125px;
+  height: 60px;
+  transition: width 0.3s ease, height 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+}
+
+.sign-up:hover {
+  width: 135px;
+  height: 65px;
+  border: 2px solid black;
+  font-weight: 600;
+  box-shadow: 0px 4px 7px 3px rgba(0,0,0,0.7);
+}
+
+.activity-img {
+  margin: 8px;
+  grid-area: 1 / 1 / -1 / span 5;
+  background-position: center;
+  background-size: cover;
+  border: 2px solid white;
+  border-radius: 16px;
+}
+
+.activity-desc {
+  grid-area: 1 / 7 / -1 / -1;
+}
+
+.activity-sign-up {
+  grid-area: 3 / 1 / span 1 / span 5;
+  justify-self: center;
+  align-self: start;
+}
+
+/* Kayak */
+
+#kayak-img {
+  background-image: url('./images/riverKayak.jpg');
+}
+
+/* Hiking */
+
+#hiking-img {
+  background-image: url('./images/hiking.jpg');
+  background-position: bottom;
+}
+
+/* Snowshoe */
+
+#snowshoe-img {
+  background-image: url('./images/snowshoe.jpg');
+  background-position: bottom;
 }
 
 /* Footer Styling */
@@ -69,8 +194,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  top: 12vh;
   background-color: black;
   color: white;
   height: max-content;
@@ -79,7 +204,17 @@ footer {
   z-index: 2;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1400px) {
+  article {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+  article {
+    width: 90%;
+  }
 
   header {
     justify-content: start;
@@ -102,4 +237,41 @@ footer {
   .contact-info > p {
     margin: 0.25rem 0;
   }
+
+  .section-title {
+    margin: 12px auto;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 1.4rem;
+  }
+
+  .card {
+    min-height: 360px;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    margin: 0.7rem auto;
+  }
+
+  .activity-img {
+    grid-area: 1 / 1 / span 3 / -1;
+  }
+  
+  .activity-header {
+    grid-area: 1 / 1 / span 1 / span 2;
+    align-self: start;
+  }
+  
+  .activity-desc {
+    grid-area: 4 / 1 / -1 / -1;
+  }
+  
+  .activity-sign-up {
+    grid-area: 3 / 1 / 3 / span 2;
+    justify-self: center;
+    align-self: center;
+  }
+
+
 }
